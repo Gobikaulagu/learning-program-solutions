@@ -1,0 +1,31 @@
+Understanding Asymptotic Notation
+🔸 Significance of Big O Notation in Algorithm Analysis
+Big O notation is a mathematical concept used to describe how an algorithm's runtime or memory usage increases as the size of input grows. It helps developers evaluate the efficiency of algorithms and compare different solutions. In the context of search functionality on an e-commerce site, Big O helps determine which search method delivers results faster, ensuring a better user experience.
+
+🔸 Performance Scenarios in Search Operations
+Best Case: This occurs when the target item is found right away—like at the first position. For a linear search, this is O(1) time.
+
+Average Case: Happens when the item is located somewhere in the middle. For linear search, it takes about O(n) time.
+
+Worst Case: The item is either at the end of the list or not present at all. In this case, linear search takes O(n) time, whereas binary search performs better with a time complexity of O(log n).
+
+Performance Analysis
+Time Complexity Overview
+Linear Search:
+Best Case: O(1) – found at the first index
+
+Average Case: O(n) – found in the middle
+
+Worst Case: O(n) – last index or not found
+
+Binary Search:
+Best Case: O(1) – found at the middle in first try
+
+Average Case: O(log n)
+
+Worst Case: O(log n) – keeps halving till found or not
+
+Choosing the Right Search Algorithm
+Binary search is generally the better option for platforms with large product lists because it drastically reduces search time. However, it requires that the product list is already sorted. If the data is frequently changing or unsorted, linear search might be more practical in some cases.
+
+But for most modern e-commerce systems where data can be preprocessed and sorted in advance, binary search is the optimal choice due to its superior speed and scalability.
