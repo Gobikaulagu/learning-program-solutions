@@ -1,0 +1,3 @@
+12:30:36.706 [main] INFO  com.gobika.logging.App - This is an INFO level log message.
+12:30:36.711 [main] WARN  com.gobika.logging.App - This is a WARN level log message.
+12:30:36.711 [main] ERROR com.gobika.logging.App - This is an ERROR level log message.
