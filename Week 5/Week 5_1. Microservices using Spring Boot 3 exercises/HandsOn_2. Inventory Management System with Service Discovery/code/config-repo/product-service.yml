@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: product-service
+server:
+  port: 8081
+
+# other custom configs
+product:
+  title: Product Microservice

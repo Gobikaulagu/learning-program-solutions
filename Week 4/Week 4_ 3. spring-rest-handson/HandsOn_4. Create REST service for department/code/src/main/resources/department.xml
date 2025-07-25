@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+           http://www.springframework.org/schema/beans 
+           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="departmentList" class="java.util.ArrayList">
+        <constructor-arg>
+            <list>
+                <bean class="com.cognizant.department_api.model.Department">
+                    <constructor-arg value="1"/>
+                    <constructor-arg value="Human Resources"/>
+                </bean>
+                <bean class="com.cognizant.department_api.model.Department">
+                    <constructor-arg value="2"/>
+                    <constructor-arg value="Finance"/>
+                </bean>
+                <bean class="com.cognizant.department_api.model.Department">
+                    <constructor-arg value="3"/>
+                    <constructor-arg value="Technology"/>
+                </bean>
+                <bean class="com.cognizant.department_api.model.Department">
+                    <constructor-arg value="4"/>
+                    <constructor-arg value="Marketing"/>
+                </bean>
+            </list>
+        </constructor-arg>
+    </bean>
+</beans>
+

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Sample Skill -->
+    <bean id="skill1" class="com.cognizant.employee_api_service.model.Skill">
+        <property name="id" value="1"/>
+        <property name="name" value="HTML"/>
+    </bean>
+
+    <!-- Sample Department -->
+    <bean id="department1" class="com.cognizant.employee_api_service.model.Department">
+        <property name="id" value="1"/>
+        <property name="name" value="IT"/>
+    </bean>
+
+    <!-- Sample Employee -->
+    <bean id="employee1" class="com.cognizant.employee_api_service.model.Employee">
+        <property name="id" value="1"/>
+        <property name="name" value="John Doe"/>
+        <property name="salary" value="50000"/>
+        <property name="permanent" value="true"/>
+        <property name="department" ref="department1"/>
+        <property name="skills">
+            <list>
+                <ref bean="skill1"/>
+            </list>
+        </property>
+    </bean>
+
+    <!-- Employee List -->
+    <bean id="employeeList" class="java.util.ArrayList">
+        <constructor-arg>
+            <list>
+                <ref bean="employee1"/>
+                <!-- Add other employees if needed -->
+            </list>
+        </constructor-arg>
+    </bean>
+
+</beans>
